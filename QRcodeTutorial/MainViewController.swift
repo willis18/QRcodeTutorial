@@ -6,12 +6,17 @@
 //
 
 import UIKit
+import WebKit
 
-class ViewController: UIViewController {
+class MainViewController: UIViewController {
 
+    @IBOutlet var webView: WKWebView!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        let url = URL (string: "https://m.naver.com")
+        let requestObj = URLRequest(url: url!)
+        webView.load(requestObj)
     }
 
 
